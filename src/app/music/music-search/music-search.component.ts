@@ -1,23 +1,23 @@
 import { Component, Output, EventEmitter, Input } from '@angular/core';
 
 @Component({
-    selector: 'music-search',
-    templateUrl: './music-search.component.html',
-    styleUrls: ['./music-search.component.css']
+  selector: 'music-search',
+  templateUrl: './music-search.component.html',
+  styleUrls: ['./music-search.component.scss']
 })
-
 export class MusicSearchComponent {
-    track: string;
-    @Input() tracks: any[];
 
-    @Output() update = new EventEmitter();
-    @Output() query = new EventEmitter();
+  track: string;
+  @Input() tracks: any[];
 
-    search(event){
-        this.query.emit(event.query);
-    }
+  @Output() update = new EventEmitter();
+  @Output() query = new EventEmitter();
 
-    select(track){
-        this.update.emit(track)
-    }
+  search(event) {
+    this.query.emit(event.query);
+  }
+
+  select(track) {
+    this.update.emit(track);
+  }
 }

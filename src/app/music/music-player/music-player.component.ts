@@ -3,7 +3,7 @@ import {Component, Output, EventEmitter, Input} from '@angular/core';
 @Component({
     selector: 'music-player',
     templateUrl: './music-player.component.html',
-    styleUrls: ['./music-player.component.ts']
+    styleUrls: ['./music-player.component.scss']
 })
 
 export class MusicPlayerComponent {
